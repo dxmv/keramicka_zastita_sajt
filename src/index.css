@@ -1,16 +1,49 @@
 @import "tailwindcss";
 
-/* @layer base {
-  body {
-    @apply font-sans text-navy-700 antialiased;
-  }
+@theme {
+  --color-yellow-300: #FFE97C;
+  --color-yellow-500: #FFD43A;
+  --color-yellow-600: #F3C201;
+  --color-navy-700: #1E2A3B;
+  --color-navy-900: #0D111B;
+  --color-grey-200: #E5E7EB;
+  --color-grey-400: #9CA3AF;
+  --color-surface: #F7F8FA;
+  --color-error: #E12D39;
+  --color-success: #16A34A;
+  --border-radius-lg: 0.5rem;
+  --border-radius-md: calc(0.5rem - 2px);
+  --border-radius-sm: calc(0.5rem - 4px);
+  
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold text-navy-900;
+
+@layer utilities {
+  .btn-primary {
+    background-color: #FFD43A;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
   }
-} */
+  .btn-primary:hover {
+    background-color: #F3C201;
+  }
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #FFE97C;
+  }
+  .btn-secondary {
+    border: 1px solid #1E2A3B;
+    color: #1E2A3B;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+

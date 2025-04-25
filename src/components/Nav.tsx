@@ -1,3 +1,5 @@
+"use client"
+
 import type React from "react"
 
 import { useState, useEffect } from "react"
@@ -25,13 +27,13 @@ const Nav = () => {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled ? "bg-navy-900 shadow-md" : "bg-navy-900"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-navy-900">
+            <span className="text-2xl font-bold text-white">
               SHINE<span className="text-yellow-500">MASTERS</span>
             </span>
           </Link>
@@ -46,7 +48,7 @@ const Nav = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-navy-700"
+            className="md:hidden text-grey-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -57,7 +59,7 @@ const Nav = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white">
+        <div className="md:hidden bg-navy-900">
           <div className="px-4 pt-2 pb-4 space-y-4">
             <MobileNavLink to="/">Home</MobileNavLink>
             <MobileNavLink to="/services">Services</MobileNavLink>
@@ -77,7 +79,7 @@ const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) =>
   return (
     <Link
       to={to}
-      className={`text-navy-700 hover:text-yellow-500 transition-colors ${
+      className={`text-grey-200 hover:text-yellow-500 transition-colors ${
         isActive ? "font-medium text-yellow-500" : ""
       }`}
     >
@@ -93,7 +95,7 @@ const MobileNavLink = ({ to, children }: { to: string; children: React.ReactNode
   return (
     <Link
       to={to}
-      className={`block py-2 text-navy-700 hover:text-yellow-500 transition-colors ${
+      className={`block py-2 text-grey-200 hover:text-yellow-500 transition-colors ${
         isActive ? "font-medium text-yellow-500" : ""
       }`}
     >

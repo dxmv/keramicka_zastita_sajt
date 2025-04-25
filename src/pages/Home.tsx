@@ -5,6 +5,10 @@ import type React from "react"
 import { useEffect, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import "swiper/css/effect-fade"
 import { Link } from "react-router"
 import { ArrowRight, Sparkles, Shield, Clock, PenToolIcon as Tool } from "lucide-react"
 
@@ -13,7 +17,6 @@ import PrimaryButton from "../components/PrimaryButton"
 import SecondaryButton from "../components/SecondaryButton"
 import RatingBadge from "../components/RatingBadge"
 import ImageCard from "../components/ImageCard"
-import TestimonialsSlider from "../components/TestimonialsSlider"
 
 // Sample images - in a real app, these would be imported or fetched
 const heroImages = [
@@ -55,30 +58,6 @@ const services = [
   },
 ]
 
-const testimonials = [
-  {
-    id: 1,
-    name: "John Smith",
-    role: "BMW Owner",
-    content:
-      "ShineMasters transformed my 5-year-old BMW to look better than when I first bought it. Their attention to detail is unmatched!",
-  },
-  {
-    id: 2,
-    name: "Sarah Johnson",
-    role: "Tesla Owner",
-    content:
-      "I was amazed by the ceramic coating service. My Tesla has never looked this good, and water just beads right off!",
-  },
-  {
-    id: 3,
-    name: "Michael Brown",
-    role: "Porsche Owner",
-    content:
-      "The team at ShineMasters are true professionals. They treated my Porsche with the care it deserves. Highly recommended!",
-  },
-]
-
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -89,7 +68,7 @@ const Home = () => {
   return (
     <div className="space-y-20 py-8">
       {/* Hero Section */}
-      <section className="-mx-4 lg:-mx-6 relative">
+      <section className="relative overflow-hidden">
         <Swiper
           modules={[Autoplay, Pagination, Navigation, EffectFade]}
           effect="fade"
@@ -98,7 +77,7 @@ const Home = () => {
           navigation
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           loop
-          className="h-[500px] md:h-[600px]"
+          className="h-[500px] md:h-[600px] w-full"
         >
           {heroImages.map((image, index) => (
             <SwiperSlide key={index}>
@@ -137,7 +116,7 @@ const Home = () => {
       </section>
 
       {/* Value Propositions */}
-      <section className="py-20 bg-surface -mx-4 lg:-mx-6 px-4 lg:px-6">
+      <section className="py-20 bg-surface">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             title="Why Choose ShineMasters"
@@ -150,21 +129,25 @@ const Home = () => {
               title="Expert Technicians"
               description="Our team consists of certified professionals with years of experience."
               icon={<Sparkles className="text-yellow-500" size={36} />}
+              darkMode
             />
             <ValueCard
               title="Premium Products"
               description="We use only the highest quality products for lasting results."
               icon={<Shield className="text-yellow-500" size={36} />}
+              darkMode
             />
             <ValueCard
               title="Convenient Service"
               description="Flexible scheduling and quick turnaround times to fit your busy life."
               icon={<Clock className="text-yellow-500" size={36} />}
+              darkMode
             />
             <ValueCard
               title="Satisfaction Guaranteed"
               description="We're not happy until you're completely satisfied with our work."
               icon={<Tool className="text-yellow-500" size={36} />}
+              darkMode
             />
           </div>
         </div>
@@ -199,7 +182,7 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20 bg-surface -mx-4 lg:-mx-6 px-4 lg:px-6">
+      <section className="py-20 bg-surface">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             title="Our Services"
@@ -212,11 +195,11 @@ const Home = () => {
               <Link
                 key={service.id}
                 to={`/services#${service.id}`}
-                className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
+                className="bg-navy-700 rounded-lg shadow-sm p-6 hover:shadow-md transition-all hover:translate-y-[-5px]"
               >
                 <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{service.name}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-white">{service.name}</h3>
+                <p className="text-grey-200 mb-4">{service.description}</p>
                 <span className="text-yellow-500 font-medium flex items-center">
                   Learn More <ArrowRight className="ml-1" size={16} />
                 </span>
@@ -230,21 +213,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20">
-        <SectionHeading
-          title="What Our Customers Say"
-          subtitle="Don't just take our word for it. Here's what our satisfied customers have to say."
-          centered
-        />
-
-        <div className="max-w-4xl mx-auto">
-          <TestimonialsSlider testimonials={testimonials} />
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 bg-navy-700 text-white -mx-4 lg:-mx-6 px-4 lg:px-6">
+      <section className="py-16 bg-navy-700 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Vehicle?</h2>
           <p className="text-lg text-grey-200 mb-8 max-w-2xl mx-auto">
@@ -257,12 +227,28 @@ const Home = () => {
   )
 }
 
-const ValueCard = ({ title, description, icon }: { title: string; description: string; icon: React.ReactNode }) => {
+const ValueCard = ({
+  title,
+  description,
+  icon,
+  darkMode = false,
+}: {
+  title: string
+  description: string
+  icon: React.ReactNode
+  darkMode?: boolean
+}) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
+    <div
+      className={`${darkMode ? "bg-navy-900" : "bg-white"} rounded-lg shadow-md p-6 transition-transform hover:translate-y-[-5px]`}
+    >
       <div className="mb-4">{icon}</div>
-      <h3 className="text-xl font-bold mb-2 border-b-4 border-yellow-500 pb-2 inline-block">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3
+        className={`text-xl font-bold mb-2 border-b-4 border-yellow-500 pb-2 inline-block ${darkMode ? "text-white" : ""}`}
+      >
+        {title}
+      </h3>
+      <p className={darkMode ? "text-grey-200" : "text-gray-600"}>{description}</p>
     </div>
   )
 }
