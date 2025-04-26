@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="py-12 px-20">
       <SectionHeading
         title="Kontakt"
-        subtitle="Kontaktirajte nas za rezervaciju ili bilo kakve pitanja."
+        subtitle="Kontaktirajte nas za rezervaciju ili bilo kakva pitanja."
         centered
       />
 
@@ -24,11 +24,9 @@ const Contact = () => {
                 <MapPin className="text-yellow-500" size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">Our Location</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Lokacija</h3>
                 <p className="text-grey-200">
-                  123 Detailing Street
-                  <br />
-                  Cartown, CT 12345
+                  Kolarska, Smederevo 11300
                 </p>
               </div>
             </div>
@@ -41,10 +39,10 @@ const Contact = () => {
                 <Phone className="text-yellow-500" size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">Phone Number</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Broj Telefona</h3>
                 <p className="text-grey-200">
-                  <a href="tel:+15551234567" className="hover:text-yellow-500 transition-colors">
-                    (555) 123-4567
+                  <a href="tel:0646140065" className="hover:text-yellow-500 transition-colors">
+                    064 614 0065
                   </a>
                 </p>
               </div>
@@ -58,14 +56,9 @@ const Contact = () => {
                 <Clock className="text-yellow-500" size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">Working Hours</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Radno Vreme</h3>
                 <div className="text-grey-200 grid grid-cols-2 gap-2">
-                  <span>Monday - Friday:</span>
-                  <span>8:00 AM - 6:00 PM</span>
-                  <span>Saturday:</span>
-                  <span>9:00 AM - 5:00 PM</span>
-                  <span>Sunday:</span>
-                  <span>Closed</span>
+                  <span>10:00 - 19:00</span>
                 </div>
               </div>
             </div>
@@ -77,21 +70,20 @@ const Contact = () => {
           {/* Google Map */}
           <div className="rounded-lg overflow-hidden shadow-lg h-[400px] bg-gray-100 mb-6">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215175515187!2d-73.98784492426285!3d40.75798657138946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.6969816121887!2d20.901826599999996!3d44.62367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x67fd180f871bc0b1%3A0xa3dae3f74709788c!2sKeramicka%20Zastita%20SD!5e0!3m2!1sen!2srs!4v1745694348412!5m2!1sen!2srs"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="ShineMasters Location"
             ></iframe>
           </div>
         </div>
       </div>
 
       {/* Social Media Links - Larger and below both columns */}
-      <div className="mt-12 bg-navy-900 rounded-lg shadow-md p-8">
+      {/* <div className="mt-12 bg-navy-900 rounded-lg shadow-md p-8">
         <h3 className="text-2xl font-bold text-white mb-6 text-center">Connect With Us</h3>
         <div className="flex justify-center space-x-8">
           <SocialLink href="https://facebook.com" icon={<Facebook size={40} />} label="Facebook" />
@@ -99,43 +91,7 @@ const Contact = () => {
           <SocialLink href="https://twitter.com" icon={<Twitter size={40} />} label="Twitter" />
           <SocialLink href="https://linkedin.com" icon={<Linkedin size={40} />} label="LinkedIn" />
         </div>
-      </div>
-
-      {/* JSON-LD for LocalBusiness */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AutoDetailing",
-            name: "ShineMasters",
-            image: "https://example.com/photos/1x1/photo.jpg",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "123 Detailing Street",
-              addressLocality: "Cartown",
-              addressRegion: "CT",
-              postalCode: "12345",
-              addressCountry: "US",
-            },
-            telephone: "+15551234567",
-            openingHoursSpecification: [
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                opens: "08:00",
-                closes: "18:00",
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: "Saturday",
-                opens: "09:00",
-                closes: "17:00",
-              },
-            ],
-          }),
-        }}
-      />
+      </div> */}
     </div>
   )
 }

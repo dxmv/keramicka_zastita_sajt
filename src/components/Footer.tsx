@@ -16,70 +16,56 @@ const Footer = () => {
               Professional car detailing services that bring your vehicle back to showroom condition.
             </p>
             <div className="flex space-x-4">
-              <SocialIcon href="https://facebook.com" icon={<Facebook size={20} />} />
-              <SocialIcon href="https://instagram.com" icon={<Instagram size={20} />} />
-              <SocialIcon href="https://twitter.com" icon={<Twitter size={20} />} />
+              <SocialIcon href="https://www.instagram.com/keramicka_zastita_sd/" icon={<Instagram size={20} />} />
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white text-lg font-bold mb-4">Quick Links</h4>
+            <h4 className="text-white text-lg font-bold mb-4">Linkovi</h4>
             <ul className="space-y-2">
-              <FooterLink to="/">Home</FooterLink>
-              <FooterLink to="/services">Services</FooterLink>
-              <FooterLink to="/gallery">Gallery</FooterLink>
-              <FooterLink to="/contact">Contact</FooterLink>
+              <FooterLink to="/">Početna</FooterLink>
+              <FooterLink to="/services">Usluge</FooterLink>
+              <FooterLink to="/gallery">Galerija</FooterLink>
+              <FooterLink to="/contact">Kontakt</FooterLink>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-white text-lg font-bold mb-4">Our Services</h4>
+            <h4 className="text-white text-lg font-bold mb-4">Naše Usluge</h4>
             <ul className="space-y-2">
-              <FooterLink to="/services#exterior">Exterior Detailing</FooterLink>
-              <FooterLink to="/services#interior">Interior Detailing</FooterLink>
-              <FooterLink to="/services#ceramic">Ceramic Coating</FooterLink>
-              <FooterLink to="/services#paint">Paint Correction</FooterLink>
+              <FooterLink to="/services#exterior">Eksterijer Detalj</FooterLink>
+              <FooterLink to="/services#interior">Interijer Detalj</FooterLink>
+              <FooterLink to="/services#ceramic">Keramičko Postavljanje</FooterLink>
+              <FooterLink to="/services#paint">Popravka Lakova</FooterLink>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white text-lg font-bold mb-4">Contact Us</h4>
+            <h4 className="text-white text-lg font-bold mb-4">Kontaktirajte Nas</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 text-yellow-500 flex-shrink-0 mt-1" size={18} />
-                <span>123 Detailing Street, Cartown, CT 12345</span>
+                <span>Kolarska, Smederevo</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 text-yellow-500 flex-shrink-0" size={18} />
-                <a href="tel:+15551234567" className="hover:text-yellow-500 transition-colors">
-                  (555) 123-4567
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Mail className="mr-2 text-yellow-500 flex-shrink-0" size={18} />
-                <a href="mailto:info@shinemasters.com" className="hover:text-yellow-500 transition-colors">
-                  info@shinemasters.com
+                <a href="tel:0646140065" className="hover:text-yellow-500 transition-colors">
+                  064 614 0065
                 </a>
               </li>
               <li className="flex items-start">
                 <Clock className="mr-2 text-yellow-500 flex-shrink-0 mt-1" size={18} />
-                <span>
-                  Mon-Fri: 8am-6pm
-                  <br />
-                  Sat: 9am-5pm
-                  <br />
-                  Sun: Closed
-                </span>
+                <span>10:00 - 19:00</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} ShineMasters. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Keramicka Zaštita Smederevo. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 - [ ] Some small style fixes
   - [x] Padding on home components
   - [x] Center text, almost everywhere
-  - [ ] Social links above everything else in contact, also smaller, without background color
+  - [x] Social links above everything else in contact, also smaller, without background color
 - [ ] Images
   - [ ] Logo nav
   - [ ] Logo footer
@@ -9,8 +9,14 @@
   - [ ] Recent work images(gallery)
   - [ ] Services images
   - [ ] Gallery images
-- [ ] Real map in contact
+- [x] Real map in contact
 - [ ] Real info
+  - [ ] Home
+  - [ ] Services
+  - [ ] Gallery
+  - [x] Contact
+  - [ ] Footer
+  - [ ] Nav
 - [ ] Is it responsive
 - [ ] Favicon
 - [ ] Deploy
