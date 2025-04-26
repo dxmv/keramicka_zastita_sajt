@@ -61,13 +61,13 @@ const Home = () => {
                   className="h-full w-full object-cover"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-                <div className="absolute inset-0 z-20 flex items-center justify-start px-4 md:px-12 lg:px-20 max-w-7xl mx-auto">
-                  <div className="max-w-xl text-white">
+                <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4 md:px-12 lg:px-20 max-w-7xl mx-auto">
+                  <div className="max-w-7xl text-white">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
                       Keramička zaštita Smederevo
                     </h1>
                     <p className="text-lg md:text-xl mb-8 text-grey-200">
-                      PROFESIONALNO POLIRANJE, DETAILING AUTOMOBILA I KERAMIKA ZAŠTITA
+                      Profesionalno polinarnje, detailing automobila i kermaička zaštita
                     </p>
                     <PrimaryButton to="#contactForm" className="mr-4">
                       Pozovite nas
@@ -116,12 +116,17 @@ const Home = () => {
             />
           </div>
         </div>
+        <div className="text-center mt-12">
+          <PrimaryButton to="#contactForm" className="mr-4">
+            Pozovite nas
+          </PrimaryButton>
+        </div>
       </section>
 
       {/* Mini Gallery - Full width */}
       <section className="py-20 w-full">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
-          <SectionHeading title="Naši radovi" subtitle="Pogledajte neke od naših poslednjih radova." centered />
+          <SectionHeading title="Galerija" subtitle="Pogledajte neke od naših omiljenih radova" centered />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
@@ -138,7 +143,7 @@ const Home = () => {
 
           <div className="text-center mt-12">
             <SecondaryButton to="/gallery">
-              View Full Gallery <ArrowRight className="ml-2 inline-block" size={16} />
+              Pogledajte još slika <ArrowRight className="ml-2 inline-block" size={16} />
             </SecondaryButton>
           </div>
         </div>
@@ -205,17 +210,6 @@ const Home = () => {
           <div className="text-center mt-12">
             <PrimaryButton to="/services">Pogledajte sve usluge</PrimaryButton>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Full width */}
-      <section className="py-16 bg-navy-700 text-white w-full">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Vehicle?</h2>
-          <p className="text-lg text-grey-200 mb-8 max-w-2xl mx-auto">
-            Schedule your appointment today and experience the ShineMasters difference.
-          </p>
-          <PrimaryButton to="/contact">Book Your Appointment</PrimaryButton>
         </div>
       </section>
     </div>

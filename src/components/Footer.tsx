@@ -12,8 +12,8 @@ const Footer = () => {
             <h3 className="text-white text-xl font-bold mb-4">
               SHINE<span className="text-yellow-500">MASTERS</span>
             </h3>
-            <p className="mb-4">
-              Professional car detailing services that bring your vehicle back to showroom condition.
+            <p className="mb-4 text-sm">
+              Pažljivo obavljamo pranje, poliranje i zaštitu vozila, čime vraćamo sjaj vašem automobilu. Koristimo najkvalitetnije proizvode i tehnike kako bismo osigurali besprekoran izgled vašeg vozila.
             </p>
             <div className="flex space-x-4">
               <SocialIcon href="https://www.instagram.com/keramicka_zastita_sd/" icon={<Instagram size={20} />} />
