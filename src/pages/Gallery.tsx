@@ -54,10 +54,10 @@ const Gallery = () => {
   }
 
   return (
-    <div className="py-12">
+    <div className="py-12 px-20">
       <SectionHeading
-        title="Our Work Gallery"
-        subtitle="Browse through our portfolio of detailing projects and see the quality of our work."
+        title="Galerija"
+        subtitle="Pogledajte neke od naših omiljenih radova."
         centered
       />
 

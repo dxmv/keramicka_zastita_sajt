@@ -188,10 +188,10 @@ const Services = () => {
   }, [location])
 
   return (
-    <div className="py-12">
+    <div className="py-12 px-20">
       <SectionHeading
-        title="Our Detailing Services"
-        subtitle="We offer a comprehensive range of professional detailing services to keep your vehicle looking its best."
+        title="Naše usluge"
+        subtitle="Pružamo kompletan spektar usluga za održavanje vašeg automobila."
         centered
       />
 

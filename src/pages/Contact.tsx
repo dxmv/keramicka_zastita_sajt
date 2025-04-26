@@ -7,10 +7,10 @@ import SectionHeading from "../components/SectionHeading"
 
 const Contact = () => {
   return (
-    <div className="py-12">
+    <div className="py-12 px-20">
       <SectionHeading
-        title="Contact Us"
-        subtitle="Get in touch with our team to schedule your appointment or ask any questions."
+        title="Kontakt"
+        subtitle="Kontaktirajte nas za rezervaciju ili bilo kakve pitanja."
         centered
       />
 

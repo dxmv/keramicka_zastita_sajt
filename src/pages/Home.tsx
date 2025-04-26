@@ -9,14 +9,13 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import "swiper/css/effect-fade"
-import { Link } from "react-router"
 import { ArrowRight, Sparkles, Shield, Clock, PenToolIcon as Tool } from "lucide-react"
 
 import SectionHeading from "../components/SectionHeading"
 import PrimaryButton from "../components/PrimaryButton"
 import SecondaryButton from "../components/SecondaryButton"
-import RatingBadge from "../components/RatingBadge"
 import ImageCard from "../components/ImageCard"
+import ServiceCard from "../components/ServiceCard"
 
 // Sample images - in a real app, these would be imported or fetched
 const heroImages = [
@@ -31,33 +30,6 @@ const galleryImages = [
   "/placeholder.svg?height=300&width=400",
 ]
 
-const services = [
-  {
-    id: "exterior",
-    name: "Exterior Detailing",
-    description: "Complete exterior cleaning and protection",
-    icon: <Sparkles className="text-yellow-500" size={32} />,
-  },
-  {
-    id: "interior",
-    name: "Interior Detailing",
-    description: "Deep cleaning of all interior surfaces",
-    icon: <Shield className="text-yellow-500" size={32} />,
-  },
-  {
-    id: "ceramic",
-    name: "Ceramic Coating",
-    description: "Long-lasting protection for your paint",
-    icon: <Tool className="text-yellow-500" size={32} />,
-  },
-  {
-    id: "paint",
-    name: "Paint Correction",
-    description: "Remove scratches and swirl marks",
-    icon: <Clock className="text-yellow-500" size={32} />,
-  },
-]
-
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -66,9 +38,9 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="space-y-20 py-8">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
+    <div className="w-full overflow-hidden">
+      {/* Hero Section - Full screen height on desktop */}
+      <section className="relative w-full">
         <Swiper
           modules={[Autoplay, Pagination, Navigation, EffectFade]}
           effect="fade"
@@ -77,7 +49,7 @@ const Home = () => {
           navigation
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           loop
-          className="h-[500px] md:h-[600px] w-full"
+          className="h-[100vh] w-full"
         >
           {heroImages.map((image, index) => (
             <SwiperSlide key={index}>
@@ -89,38 +61,31 @@ const Home = () => {
                   className="h-full w-full object-cover"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-                <div className="absolute inset-0 z-20 flex items-center justify-start px-4 md:px-12 lg:px-20">
+                <div className="absolute inset-0 z-20 flex items-center justify-start px-4 md:px-12 lg:px-20 max-w-7xl mx-auto">
                   <div className="max-w-xl text-white">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-                      Professional Car Detailing Services
+                      Keramička zaštita Smederevo
                     </h1>
                     <p className="text-lg md:text-xl mb-8 text-grey-200">
-                      Restore your vehicle to showroom condition with our premium detailing services.
+                      PROFESIONALNO POLIRANJE, DETAILING AUTOMOBILA I KERAMIKA ZAŠTITA
                     </p>
                     <PrimaryButton to="#contactForm" className="mr-4">
-                      Book Now
+                      Pozovite nas
                     </PrimaryButton>
-                    <SecondaryButton to="/services" className="text-white border-white hover:border-yellow-500">
-                      Our Services
-                    </SecondaryButton>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30">
-          <RatingBadge rating={4.9} source="Google" />
-        </div>
       </section>
 
-      {/* Value Propositions */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-7xl mx-auto">
+      {/* Value Propositions - Full width */}
+      <section className="py-20 bg-surface w-full">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <SectionHeading
-            title="Why Choose ShineMasters"
-            subtitle="We deliver exceptional results through our commitment to quality and attention to detail."
+            title="Prednosti našeg servisa"
+            subtitle="Dostavljamo izvanredne rezultate putem našeg posvećenja kvalitetu i pažnji detaljima."
             centered
           />
 
@@ -153,69 +118,99 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mini Gallery */}
-      <section className="py-20">
-        <SectionHeading
-          title="Our Recent Work"
-          subtitle="Take a look at some of our recent detailing projects."
-          centered
-        />
+      {/* Mini Gallery - Full width */}
+      <section className="py-20 w-full">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+          <SectionHeading title="Naši radovi" subtitle="Pogledajte neke od naših poslednjih radova." centered />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {galleryImages.map((image, index) => (
-            <ImageCard
-              key={index}
-              src={image || "/placeholder.svg"}
-              alt={`Gallery image ${index + 1}`}
-              onClick={() => {
-                /* Would open lightbox in a real app */
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <SecondaryButton to="/gallery">
-            View Full Gallery <ArrowRight className="ml-2 inline-block" size={16} />
-          </SecondaryButton>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading
-            title="Our Services"
-            subtitle="We offer a comprehensive range of detailing services to keep your vehicle looking its best."
-            centered
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service) => (
-              <Link
-                key={service.id}
-                to={`/services#${service.id}`}
-                className="bg-navy-700 rounded-lg shadow-sm p-6 hover:shadow-md transition-all hover:translate-y-[-5px]"
-              >
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2 text-white">{service.name}</h3>
-                <p className="text-grey-200 mb-4">{service.description}</p>
-                <span className="text-yellow-500 font-medium flex items-center">
-                  Learn More <ArrowRight className="ml-1" size={16} />
-                </span>
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {galleryImages.map((image, index) => (
+              <ImageCard
+                key={index}
+                src={image || "/placeholder.svg"}
+                alt={`Gallery image ${index + 1}`}
+                onClick={() => {
+                  /* Would open lightbox in a real app */
+                }}
+              />
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <PrimaryButton to="/services">View All Services</PrimaryButton>
+            <SecondaryButton to="/gallery">
+              View Full Gallery <ArrowRight className="ml-2 inline-block" size={16} />
+            </SecondaryButton>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-navy-700 text-white">
-        <div className="max-w-7xl mx-auto text-center">
+      {/* Services Preview - Full width with new card design */}
+      <section className="py-20 bg-surface w-full">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+          <SectionHeading
+            title="Naše usluge"
+            subtitle="Pružamo kompletan spektar usluga za održavanje vašeg automobila."
+            centered
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <ServiceCard
+              id="exterior"
+              name="Eksterijer"
+              description="Complete exterior cleaning and protection"
+              icon={<Sparkles className="text-navy-900" size={32} />}
+              image="/placeholder.svg?height=300&width=400"
+              links={[
+                { text: "Poliranje automobila", url: "/services#poliranje" },
+                { text: "Keramička zaštita automobila", url: "/services#keramicka-zastita" },
+                { text: "Održavanje keramička zaštite", url: "/services#odrzavanje" },
+                { text: "Premijum pranje eksterijera", url: "/services#pranje" },
+              ]}
+            />
+            <ServiceCard
+              id="interior"
+              name="Interijer"
+              description="Deep cleaning of all interior surfaces"
+              icon={<Shield className="text-navy-900" size={32} />}
+              image="/placeholder.svg?height=300&width=400"
+              links={[
+                { text: "Dubinsko pranje enterijera", url: "/services#dubinsko" },
+                { text: "Čišćenje kože", url: "/services#koza" },
+              ]}
+            />
+            <ServiceCard
+              id="ceramic"
+              name="Keramička zaštita"
+              description="Long-lasting protection for your paint"
+              icon={<Tool className="text-navy-900" size={32} />}
+              image="/placeholder.svg?height=300&width=400"
+              links={[
+                { text: "Premium keramička zaštita", url: "/services#premium" },
+                { text: "Standard keramička zaštita", url: "/services#standard" },
+              ]}
+            />
+            <ServiceCard
+              id="paint"
+              name="Poliranje"
+              description="Remove scratches and swirl marks"
+              icon={<Clock className="text-navy-900" size={32} />}
+              image="/placeholder.svg?height=300&width=400"
+              links={[
+                { text: "Poliranje farbe", url: "/services#poliranje-farbe" },
+                { text: "Uklanjanje ogrebotina", url: "/services#ogrebotine" },
+              ]}
+            />
+          </div>
+
+          <div className="text-center mt-12">
+            <PrimaryButton to="/services">Pogledajte sve usluge</PrimaryButton>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section - Full width */}
+      <section className="py-16 bg-navy-700 text-white w-full">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Vehicle?</h2>
           <p className="text-lg text-grey-200 mb-8 max-w-2xl mx-auto">
             Schedule your appointment today and experience the ShineMasters difference.
