@@ -2,17 +2,29 @@
   - [x] Padding on home components
   - [x] Center text, almost everywhere
   - [x] Social links above everything else in contact, also smaller, without background color
+- [ ] Home
+  - [ ] Carousel better text
+  - [x] Packages cards (2-3 key points) + button for packages page (learn more)
+  - [x] Services from images + button for services page
+  - [ ] Why us + button for contact
+  - [ ] Before & after + button for see more in gallery
+
+- [ ] Packages page
+  - [ ] Design from o3
+- [ ] Gallery will have two types of images before & after and car images
+
 - [ ] Images
   - [ ] Logo nav
   - [ ] Logo footer
-  - [ ] Carousel images
+  - [ ] Call us button nav
+  - [ ] call us button footer
   - [ ] Recent work images(gallery)
-  - [ ] Services images
+  - [ ] Packages images
   - [ ] Gallery images
 - [x] Real map in contact
 - [ ] Real info
   - [ ] Home
-  - [ ] Services
+  - [ ] Packgaes
   - [ ] Gallery
   - [x] Contact
   - [ ] Footer

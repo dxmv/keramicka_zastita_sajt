@@ -9,7 +9,18 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import "swiper/css/effect-fade"
-import { ArrowRight, Sparkles, Shield, Clock, PenToolIcon as Tool } from "lucide-react"
+import {
+  ArrowRight,
+  Sparkles,
+  Shield,
+  Clock,
+  PenToolIcon as Tool,
+  Layers,
+  ShieldCheck,
+  Droplet,
+  Waves,
+  Brush
+} from "lucide-react"
 
 import SectionHeading from "../components/SectionHeading"
 import PrimaryButton from "../components/PrimaryButton"
@@ -61,8 +72,8 @@ const Home = () => {
                   className="h-full w-full object-cover"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-                <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4 md:px-12 lg:px-20 max-w-7xl mx-auto">
-                  <div className="max-w-7xl text-white">
+                <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4 md:px-12 lg:px-20 max-w-4/5 mx-auto">
+                  <div className="text-white">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
                       Keramička zaštita Smederevo
                     </h1>
@@ -79,12 +90,11 @@ const Home = () => {
           ))}
         </Swiper>
       </section>
-
-      {/* Value Propositions - Full width */}
-      <section className="py-20 bg-surface w-full">
+			{/* Value prop */}
+			<section className="py-20 bg-surface w-full">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <SectionHeading
-            title="Prednosti našeg servisa"
+            title="Zašto odabrati nas?"
             subtitle="Dostavljamo izvanredne rezultate putem našeg posvećenja kvalitetu i pažnji detaljima."
             centered
           />
@@ -116,6 +126,7 @@ const Home = () => {
             />
           </div>
         </div>
+
         <div className="text-center mt-12">
           <PrimaryButton to="#contactForm" className="mr-4">
             Pozovite nas
@@ -123,10 +134,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mini Gallery - Full width */}
+
+
+
+      {/* Before and After Gallery */}
       <section className="py-20 w-full">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
-          <SectionHeading title="Galerija" subtitle="Pogledajte neke od naših omiljenih radova" centered />
+          <SectionHeading title="Pre i posle" subtitle="Pogledajte rezultate našeg rada." centered />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
@@ -148,70 +162,72 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Services Preview - Full width with new card design */}
-      <section className="py-20 bg-surface w-full">
+			      {/* Services Preview - Full width with new card design */}
+						<section className="py-20 bg-surface w-full">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <SectionHeading
-            title="Naše usluge"
-            subtitle="Pružamo kompletan spektar usluga za održavanje vašeg automobila."
+            title="Paketi"
+            subtitle="Koji paket odabrati?"
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
             <ServiceCard
-              id="exterior"
-              name="Eksterijer"
-              description="Complete exterior cleaning and protection"
-              icon={<Sparkles className="text-navy-900" size={32} />}
-              image="/placeholder.svg?height=300&width=400"
-              links={[
-                { text: "Poliranje automobila", url: "/services#poliranje" },
-                { text: "Keramička zaštita automobila", url: "/services#keramicka-zastita" },
-                { text: "Održavanje keramička zaštite", url: "/services#odrzavanje" },
-                { text: "Premijum pranje eksterijera", url: "/services#pranje" },
-              ]}
+              id="standard"
+              name="Standard"
+              description="Pogodan za brzo osveženje vašeg automobila. Paket obuhvata spoljašnje pranje, dubinsko pranje enterijera, detaljan detailing, kao i čišćenje i zaštitu kože, pružajući vozilu čist i blistav izgled."
+              icon={<Sparkles className="text-brown-700" size={32} />}
+              image="/assets/images/standard.jpg"
             />
             <ServiceCard
-              id="interior"
-              name="Interijer"
-              description="Deep cleaning of all interior surfaces"
-              icon={<Shield className="text-navy-900" size={32} />}
-              image="/placeholder.svg?height=300&width=400"
-              links={[
-                { text: "Dubinsko pranje enterijera", url: "/services#dubinsko" },
-                { text: "Čišćenje kože", url: "/services#koza" },
-              ]}
+              id="silver"
+              name="Silver"
+              description="Idealan izbor za osnovnu negu vozila. Paket uključuje dekontaminaciju laka, višeslojno poliranje, keramičku zaštitu u trajanju do 2 godine, keramičku zaštitu felni, dubinsko pranje enterijera i zaštitu svih kožnih površina."
+              icon={<Shield className="text-gray-500" size={32} />}
+              image="/assets/images/silver.jpg"
             />
             <ServiceCard
-              id="ceramic"
-              name="Keramička zaštita"
-              description="Long-lasting protection for your paint"
-              icon={<Tool className="text-navy-900" size={32} />}
-              image="/placeholder.svg?height=300&width=400"
-              links={[
-                { text: "Premium keramička zaštita", url: "/services#premium" },
-                { text: "Standard keramička zaštita", url: "/services#standard" },
-              ]}
-            />
-            <ServiceCard
-              id="paint"
-              name="Poliranje"
-              description="Remove scratches and swirl marks"
-              icon={<Clock className="text-navy-900" size={32} />}
-              image="/placeholder.svg?height=300&width=400"
-              links={[
-                { text: "Poliranje farbe", url: "/services#poliranje-farbe" },
-                { text: "Uklanjanje ogrebotina", url: "/services#ogrebotine" },
-              ]}
+              id="gold"
+              name="Gold"
+              description="Premium paket za maksimalnu zaštitu i izgled vašeg automobila. Uključuje dekontaminaciju laka, višeslojno poliranje, produženu keramičku zaštitu do 5 godina, keramičku zaštitu stakala, poliranje i keramičku zaštitu felni, dubinsko pranje enterijera i kompletnu zaštitu kožnih površina."
+              icon={<Tool className="text-yellow-500" size={32} />}
+              image="/assets/images/cars/452135124_996070408884534_986979715672160165_n..jpg"
             />
           </div>
 
           <div className="text-center mt-12">
-            <PrimaryButton to="/services">Pogledajte sve usluge</PrimaryButton>
+            <PrimaryButton to="/services">Pročitaj više</PrimaryButton>
           </div>
         </div>
       </section>
+
+
+			{/** Services */}
+			<section className="py-20 w-full">
+			<div className="max-w-7xl mx-auto px-4 lg:px-6">
+          <SectionHeading
+            title="Naše Usluge"
+            subtitle="Detaljan pregled svih usluga koje nudimo za vaš automobil."
+            centered
+          />
+          {/* Scrollable container on mobile, grid on desktop */}
+          <div className="flex overflow-x-auto gap-4 px-4 pb-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:p-0">
+            {servicesData.map((service, index) => (
+              <ServiceItemCard
+                key={index}
+                title={service.title}
+                description={service.desc}
+                icon={service.icon}
+              />
+            ))}
+          </div>
+           <div className="text-center mt-12">
+            <PrimaryButton to="/contact">Kontaktirajte nas</PrimaryButton>
+          </div>
+        </div>
+      </section>
+
+
     </div>
   )
 }
@@ -238,6 +254,66 @@ const ValueCard = ({
         {title}
       </h3>
       <p className={darkMode ? "text-grey-200" : "text-gray-600"}>{description}</p>
+    </div>
+  )
+}
+
+// Data for the new Services section
+const servicesData = [
+  { 
+    title: "Dekontaminacija laka",
+    desc: "Temeljno uklanjanje tvrdokornih nečistoća kao što su katran i metalne čestice, čime se postiže glatka i čista površina laka koja blista kao nova.",
+    icon: Sparkles
+  },
+  { 
+    title: "Višeslojno poliranje",
+    desc: "Profesionalno uklanjanje čak do 80% površinskih ogrebotina i swirl-ova u 2–3 koraka, čime automobil dobija potpuno obnovljen i besprekoran sjaj.",
+    icon: Layers
+  },
+  { 
+    title: "Keramička zaštita laka",
+    desc: "Izuzetno izdržljiv 9H keramički premaz. Štiti vaš automobil od ogrebotina, UV zraka, prljavštine i olakšava svakodnevno održavanje.",
+    icon: ShieldCheck
+  },
+  { 
+    title: "Keramička zaštita stakala",
+    desc: 'Poseban premaz stakla sa "lotus efektom" koji odbija vodu, obezbeđuje jasnu vidljivost tokom kiše i povećava sigurnost vožnje.',
+    icon: Droplet
+  },
+  { 
+    title: "Dubinsko pranje",
+    desc: "Detaljno i dubinsko ekstraktorsko čišćenje sedišta, podova i tapacirunga, osvežava enterijer, uklanja fleke, neprijatne mirise i vraća osećaj novog vozila.",
+    icon: Waves
+  },
+  { 
+    title: "Detailing enterijera",
+    desc: "Kompletan detailing unutrašnjosti vozila koji uključuje čišćenje kokpita, svih plastičnih i vinil površina uz UV zaštitu koja sprečava starenje i pucanje materijala.",
+    icon: Brush
+  }
+];
+
+
+// New component for individual service items
+const ServiceItemCard = ({
+  title,
+  description,
+  icon: IconComponent,
+}: {
+  title: string
+  description: string
+  icon?: React.ComponentType<{ className?: string }>
+}) => {
+  return (
+    <div
+      className="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 text-center flex-shrink-0 w-72 md:w-auto"
+    >
+      {IconComponent && (
+        <div className="flex justify-center mb-4">
+          <IconComponent className="w-10 h-10 text-yellow-500" />
+        </div>
+      )}
+      <h3 className="text-lg font-bold mb-2 text-navy-900">{title}</h3>
+      <p className="text-sm text-grey-400">{description}</p>
     </div>
   )
 }

@@ -33,7 +33,7 @@ const ServiceCard = ({ id, name, description, icon, image, links = [] }: Service
       </div>
 
       {/* Content */}
-      <div className="pt-12 pb-6 px-6 text-center">
+      <div className="pt-12 pb-6 px-6 text-center flex flex-col h-[calc(100%-12rem)]">
         <h3 className="text-xl font-bold mb-3 text-navy-900">{name}</h3>
         <p className="text-gray-600 mb-6">{description}</p>
 
@@ -51,7 +51,7 @@ const ServiceCard = ({ id, name, description, icon, image, links = [] }: Service
         {/* View more link */}
         <Link
           to={`/services#${id}`}
-          className="inline-flex items-center text-yellow-500 font-medium mt-4 hover:text-yellow-600 transition-colors"
+          className="inline-flex justify-self-end items-center text-yellow-500 font-medium mt-auto hover:text-yellow-600 transition-colors"
         >
           Više informacija <ArrowRight className="ml-1" size={16} />
         </Link>
