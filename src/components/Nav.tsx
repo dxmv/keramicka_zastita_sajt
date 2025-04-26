@@ -5,6 +5,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router"
 import { Menu, X } from "lucide-react"
+import logo from "../assets/images/logo.jpg"
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -32,10 +33,8 @@ const Nav = () => {
     >
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-white">
-              SHINE<span className="text-yellow-500">MASTERS</span>
-            </span>
+          <Link to="/" className="flex items-center justify-center">
+            <img src={logo} alt="Keramicka Zaštita Smederevo" className="w-16 h-16" />
           </Link>
 
           {/* Desktop Navigation */}

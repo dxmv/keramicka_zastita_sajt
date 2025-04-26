@@ -1,6 +1,7 @@
 import type React from "react"
 import { Link } from "react-router"
-import { Facebook, Instagram, Twitter, Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Facebook, Instagram, Twitter, Phone, Mail, MapPin, Clock, PhoneCall } from "lucide-react"
+import logo from "../assets/images/logo.jpg"
 
 const Footer = () => {
   return (
@@ -9,14 +10,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
+            <img src={logo} alt="Keramicka Zaštita Smederevo" className="w-16 h-16 mb-4" />
             <h3 className="text-white text-xl font-bold mb-4">
-              SHINE<span className="text-yellow-500">MASTERS</span>
+              Keramicka Zaštita Smederevo
             </h3>
             <p className="mb-4 text-sm">
               Pažljivo obavljamo pranje, poliranje i zaštitu vozila, čime vraćamo sjaj vašem automobilu. Koristimo najkvalitetnije proizvode i tehnike kako bismo osigurali besprekoran izgled vašeg vozila.
             </p>
             <div className="flex space-x-4">
               <SocialIcon href="https://www.instagram.com/keramicka_zastita_sd/" icon={<Instagram size={20} />} />
+              <SocialIcon href="tel:0646140065" icon={<PhoneCall size={20} />} />
             </div>
           </div>
 

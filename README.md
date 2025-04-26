@@ -8,6 +8,7 @@
   - [x] Services from images + button for services page
   - [ ] Why us + button for contact
   - [ ] Before & after + button for see more in gallery
+  - [ ] horizontal scroll for some parts
 
 - [ ] Packages page
   - [ ] Design from o3
@@ -15,7 +16,7 @@
 
 - [ ] Images
   - [ ] Logo nav
-  - [ ] Logo footer
+  - [x] Logo footer
   - [ ] Call us button nav
   - [ ] call us button footer
   - [ ] Recent work images(gallery)
@@ -27,7 +28,7 @@
   - [ ] Packgaes
   - [ ] Gallery
   - [x] Contact
-  - [ ] Footer
+  - [x] Footer
   - [ ] Nav
 - [ ] Is it responsive
 - [ ] Favicon
