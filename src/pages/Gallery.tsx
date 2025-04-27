@@ -45,12 +45,6 @@ const galleryItems = [
   { id: 16, src: bmw7, category: "exterior", alt: "Full exterior detail" },
 ]
 
-const categories = [
-  { id: "all", name: "All" },
-  { id: "exterior", name: "Exterior" },
-  { id: "interior", name: "Interior" },
-  { id: "coating", name: "Coating" },
-]
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("all")
