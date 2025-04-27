@@ -27,17 +27,19 @@ import {
 
 import SectionHeading from "../components/SectionHeading"
 import PrimaryButton from "../components/PrimaryButton"
-import SecondaryButton from "../components/SecondaryButton"
-import ImageCard from "../components/ImageCard"
 import ServiceCard from "../components/ServiceCard"
+import BeforeAfterGallery from "../components/BeforeAfterGallery"
 
 import hero1 from "../assets/images/hero/hero1.jpg"
 import hero2 from "../assets/images/hero/hero2.jpg"
 import hero3 from "../assets/images/hero/hero3.jpg"
 
-import ba1 from "../assets/images/before-after/ba1.png"
-import ba3 from "../assets/images/before-after/ba3.jpg"
-import ba4 from "../assets/images/before-after/ba4.jpg"
+import b1 from "../assets/images/before-after/b1.png"
+import b2 from "../assets/images/before-after/b2.jpg"
+import b3 from "../assets/images/before-after/b3.jpg"
+import a1 from "../assets/images/before-after/a1.jpg"
+import a2 from "../assets/images/before-after/a2.jpg"
+import a3 from "../assets/images/before-after/a3.jpg"
 import standard from "../assets/images/cars/merc-interior.jpg"
 import silver from "../assets/images/cars/merc-front.jpg"
 import gold from "../assets/images/cars/bentley-wheel2.jpg"
@@ -49,10 +51,11 @@ const heroImages = [
   hero1,
 ]
 
-const galleryImages = [
-  ba1,
-  ba3,
-  ba4,
+// Before-After gallery data
+const beforeAfterImages = [
+  { before: b1, after: a1, description: "poliranje automobila" },
+  { before: b2, after: a2, description: "tretman stakla" },
+  { before: b3, after: a3, description: "keramički premaz" },
 ]
 
 const Home = () => {
@@ -105,7 +108,7 @@ const Home = () => {
         </Swiper>
       </section>
 			{/* Value prop */}
-			<section className="py-20 bg-surface w-full">
+			<section className="py-20 bg-surface w-full px-20">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <SectionHeading
             title="Zašto odabrati nas?"
@@ -154,37 +157,11 @@ const Home = () => {
         </div>
       </section>
 
-
-
-
       {/* Before and After Gallery */}
-      <section className="py-20 w-full">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
-          <SectionHeading title="Pre i posle" subtitle="Pogledajte rezultate našeg rada." centered />
+      <BeforeAfterGallery items={beforeAfterImages} />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {galleryImages.map((image, index) => (
-              <ImageCard
-                key={index}
-                className="h-180"
-                src={image || "/placeholder.svg"}
-                alt={`Gallery image ${index + 1}`}
-                onClick={() => {
-                  /* Would open lightbox in a real app */
-                }}
-              />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <SecondaryButton to="/galerija">
-              Pogledajte još slika <ArrowRight className="ml-2 inline-block" size={16} />
-            </SecondaryButton>
-          </div>
-        </div>
-      </section>
 			{/* Services Preview - Full width with new card design */}
-      <section className="py-20 bg-surface w-full">
+      <section className="py-20 bg-surface w-full px-20">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <SectionHeading
             title="Paketi"
@@ -222,9 +199,8 @@ const Home = () => {
         </div>
       </section>
 
-
 			{/** Services */}
-			<section className="py-20 w-full">
+			<section className="py-20 w-full px-20">
 			<div className="max-w-7xl mx-auto px-4 lg:px-6">
           <SectionHeading
             title="Naše Usluge"

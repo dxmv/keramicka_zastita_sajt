@@ -1,22 +1,11 @@
-- [ ] Better before & after
-- [ ] More responsive images 
-- [ ] Use serbian links and nav
+
+- [x] Use serbian links and nav
 
 - [ ] Images
-  - [x] Logo nav
-  - [x] Logo footer
-  - [x] call us button footer
-  - [x] Recent work images(gallery)
-  - [ ] Packages images
   - [ ] Gallery images
-- [x] Real map in contact
+- [ ] Gallery images responsive
 - [ ] Real info
-  - [x] Home
-  - [x] Packgaes
   - [ ] Gallery
-  - [x] Contact
-  - [x] Footer
-  - [x] Nav
 - [ ] Is it responsive
 - [ ] Favicon
 - [ ] Deploy
