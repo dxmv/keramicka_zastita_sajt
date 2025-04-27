@@ -50,7 +50,7 @@ const ServiceCard = ({ id, name, description, icon, image, links = [] }: Service
 
         {/* View more link */}
         <Link
-          to={`/services#${id}`}
+          to={`/paketi`}
           className="inline-flex justify-self-end items-center text-yellow-500 font-medium mt-auto hover:text-yellow-600 transition-colors"
         >
           Više informacija <ArrowRight className="ml-1" size={16} />

@@ -40,15 +40,14 @@ export const packages: Package[] = [
   {
     id: "silver",
     title: "Silver paket",
-    tagline: "Napredna zaštita do 3 god. + stakla & felne",
+    tagline: "Napredna zaštita do 2 god. + felne",
     bullets: [
       "Dekontaminacija laka",
-      "Dvoslojno poliranje",
-      "Keramička zaštita do 3 godine",
-      "Keramička zaštita stakala",
-      "Čišćenje i zaštita felni",
-      "Spoljno pranje + quick detailer",
-      "Brisanje unutrašnjih površina"
+      "Višeslojno poliranje",
+      "Keramička zaštita do 2 godine",
+      "Keramička zaštita felni",
+      "Dubinsko pranje enterijera (detailing enterijera)",
+      "Zaštita svih kožnih površina (ako ih ima)"
     ],
     prices: [
       { label: "Hečbek",    range: "250 – 310 €" },
