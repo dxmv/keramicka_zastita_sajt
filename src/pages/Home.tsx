@@ -13,7 +13,6 @@ import {
   ArrowRight,
   Sparkles,
   Shield,
-  Clock,
   PenToolIcon as Tool,
   Layers,
   ShieldCheck,
@@ -32,17 +31,28 @@ import SecondaryButton from "../components/SecondaryButton"
 import ImageCard from "../components/ImageCard"
 import ServiceCard from "../components/ServiceCard"
 
+import hero1 from "../assets/images/hero/hero1.jpg"
+import hero2 from "../assets/images/hero/hero2.jpg"
+import hero3 from "../assets/images/hero/hero3.jpg"
+
+import ba1 from "../assets/images/before-after/ba1.png"
+import ba3 from "../assets/images/before-after/ba3.jpg"
+import ba4 from "../assets/images/before-after/ba4.jpg"
+import standard from "../assets/images/cars/merc-interior.jpg"
+import silver from "../assets/images/cars/merc-front.jpg"
+import gold from "../assets/images/cars/bentley-wheel2.jpg"
+
 // Sample images - in a real app, these would be imported or fetched
 const heroImages = [
-  "/placeholder.svg?height=600&width=1200",
-  "/placeholder.svg?height=600&width=1200",
-  "/placeholder.svg?height=600&width=1200",
+  hero3,
+  hero2,
+  hero1,
 ]
 
 const galleryImages = [
-  "/placeholder.svg?height=300&width=400",
-  "/placeholder.svg?height=300&width=400",
-  "/placeholder.svg?height=300&width=400",
+  ba1,
+  ba3,
+  ba4,
 ]
 
 const Home = () => {
@@ -156,6 +166,7 @@ const Home = () => {
             {galleryImages.map((image, index) => (
               <ImageCard
                 key={index}
+                className="h-180"
                 src={image || "/placeholder.svg"}
                 alt={`Gallery image ${index + 1}`}
                 onClick={() => {
@@ -172,8 +183,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-			      {/* Services Preview - Full width with new card design */}
-						<section className="py-20 bg-surface w-full">
+			{/* Services Preview - Full width with new card design */}
+      <section className="py-20 bg-surface w-full">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <SectionHeading
             title="Paketi"
@@ -187,21 +198,21 @@ const Home = () => {
               name="Standard"
               description="Pogodan za brzo osveženje vašeg automobila. Paket obuhvata spoljašnje pranje, dubinsko pranje enterijera, detaljan detailing, kao i čišćenje i zaštitu kože, pružajući vozilu čist i blistav izgled."
               icon={<Sparkles className="text-brown-700" size={32} />}
-              image="/assets/images/standard.jpg"
+              image={standard}
             />
             <ServiceCard
               id="silver"
               name="Silver"
               description="Idealan izbor za osnovnu negu vozila. Paket uključuje dekontaminaciju laka, višeslojno poliranje, keramičku zaštitu u trajanju do 2 godine, keramičku zaštitu felni, dubinsko pranje enterijera i zaštitu svih kožnih površina."
               icon={<Shield className="text-gray-500" size={32} />}
-              image="/assets/images/silver.jpg"
+              image={silver}
             />
             <ServiceCard
               id="gold"
               name="Gold"
               description="Premium paket za maksimalnu zaštitu i izgled vašeg automobila. Uključuje dekontaminaciju laka, višeslojno poliranje, produženu keramičku zaštitu do 5 godina, keramičku zaštitu stakala, poliranje i keramičku zaštitu felni, dubinsko pranje enterijera i kompletnu zaštitu kožnih površina."
               icon={<Tool className="text-yellow-500" size={32} />}
-              image="/assets/images/cars/452135124_996070408884534_986979715672160165_n..jpg"
+              image={gold}
             />
           </div>
 

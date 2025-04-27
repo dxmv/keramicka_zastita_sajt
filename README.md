@@ -1,11 +1,9 @@
-- [ ] Home
-  - [ ] Carousel better text
+- [x] Home
+  - [x] Carousel better text
   - [x] Packages cards (2-3 key points) + button for packages page (learn more)
   - [x] Services from images + button for services page
-  - [ ] Why us + button for contact
-  - [ ] Before & after + button for see more in gallery
-  - [ ] horizontal scroll for some parts
-  - [ ] Testemonial carousel google reviews
+  - [x] Why us + button for contact
+  - [x] Before & after + button for see more in gallery
 
 - [ ] Packages page
   - [ ] Design from o3
