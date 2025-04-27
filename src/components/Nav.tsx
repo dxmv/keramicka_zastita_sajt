@@ -62,10 +62,10 @@ const Nav = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-navy-900">
           <div className="px-4 pt-2 pb-4 space-y-4">
-            <MobileNavLink to="/">Home</MobileNavLink>
-            <MobileNavLink to="/services">Services</MobileNavLink>
-            <MobileNavLink to="/gallery">Gallery</MobileNavLink>
-            <MobileNavLink to="/contact">Contact</MobileNavLink>
+            <MobileNavLink to="/">Početna</MobileNavLink>
+            <MobileNavLink to="/paketi">Paketi</MobileNavLink>
+            <MobileNavLink to="/galerija">Galerija</MobileNavLink>
+            <MobileNavLink to="/kontakt">Kontakt</MobileNavLink>
           </div>
         </div>
       )}

@@ -28,20 +28,19 @@ const Footer = () => {
             <h4 className="text-white text-lg font-bold mb-4">Linkovi</h4>
             <ul className="space-y-2">
               <FooterLink to="/">Početna</FooterLink>
-              <FooterLink to="/services">Usluge</FooterLink>
-              <FooterLink to="/gallery">Galerija</FooterLink>
-              <FooterLink to="/contact">Kontakt</FooterLink>
+              <FooterLink to="/paketi">Paketi</FooterLink>
+              <FooterLink to="/galerija">Galerija</FooterLink>
+              <FooterLink to="/kontakt">Kontakt</FooterLink>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-white text-lg font-bold mb-4">Naše Usluge</h4>
+            <h4 className="text-white text-lg font-bold mb-4">Naši Paketi</h4>
             <ul className="space-y-2">
-              <FooterLink to="/services#exterior">Eksterijer Detalj</FooterLink>
-              <FooterLink to="/services#interior">Interijer Detalj</FooterLink>
-              <FooterLink to="/services#ceramic">Keramičko Postavljanje</FooterLink>
-              <FooterLink to="/services#paint">Popravka Lakova</FooterLink>
+              <FooterLink to="/paketi#standard">Standard Paket</FooterLink>
+              <FooterLink to="/paketi#silver">Silver Paket</FooterLink>
+              <FooterLink to="/paketi#gold">Gold Paket</FooterLink>
             </ul>
           </div>
 
