@@ -179,7 +179,7 @@ const PackagesTabs = () => {
 
 const Packages = () => {
   return (
-    <div className="py-12 px-20 max-w-7xl mx-auto">
+    <div className="py-12 px-4 md:px-8 lg:px-20 max-w-7xl mx-auto">
       <SectionHeading
         title="Paketi zaštite"
         subtitle="Odaberite paket koji najbolje odgovara vašim potrebama i budžetu."

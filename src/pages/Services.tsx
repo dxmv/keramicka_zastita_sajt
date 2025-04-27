@@ -188,7 +188,7 @@ const Services = () => {
   }, [location])
 
   return (
-    <div className="py-12 px-20">
+    <div className="py-12 px-4 md:px-8 lg:px-20">
       <SectionHeading
         title="Naše usluge"
         subtitle="Pružamo kompletan spektar usluga za održavanje vašeg automobila."

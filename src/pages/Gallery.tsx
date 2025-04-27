@@ -65,7 +65,7 @@ const Gallery = () => {
   }
 
   return (
-    <div className="py-12 px-20">
+    <div className="py-12 px-4 md:px-8 lg:px-20">
       <SectionHeading
         title="Galerija"
         subtitle="Pogledajte neke od naših omiljenih radova."

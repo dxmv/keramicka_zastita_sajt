@@ -108,8 +108,8 @@ const Home = () => {
         </Swiper>
       </section>
 			{/* Value prop */}
-			<section className="py-20 bg-surface w-full px-20">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+			<section className="py-20 bg-surface w-full px-4 md:px-8 lg:px-20">
+        <div className="max-w-7xl mx-auto">
           <SectionHeading
             title="Zašto odabrati nas?"
             subtitle="Dostavljamo izvanredne rezultate putem našeg posvećenja kvalitetu i pažnji detaljima."
@@ -161,8 +161,8 @@ const Home = () => {
       <BeforeAfterGallery items={beforeAfterImages} />
 
 			{/* Services Preview - Full width with new card design */}
-      <section className="py-20 bg-surface w-full px-20">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+      <section className="py-20 bg-surface w-full px-4 md:px-8 lg:px-20">
+        <div className="max-w-7xl mx-auto">
           <SectionHeading
             title="Paketi"
             subtitle="Koji paket odabrati?"
@@ -200,7 +200,7 @@ const Home = () => {
       </section>
 
 			{/** Services */}
-			<section className="py-20 w-full px-20">
+			<section className="py-20 w-full px-4 md:px-8 lg:px-20">
 			<div className="max-w-7xl mx-auto px-4 lg:px-6">
           <SectionHeading
             title="Naše Usluge"
