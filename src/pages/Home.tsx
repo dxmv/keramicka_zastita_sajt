@@ -19,7 +19,11 @@ import {
   ShieldCheck,
   Droplet,
   Waves,
-  Brush
+  Brush,
+  Award,
+  Users,
+  Briefcase,
+  MapPin
 } from "lucide-react"
 
 import SectionHeading from "../components/SectionHeading"
@@ -80,7 +84,7 @@ const Home = () => {
                     <p className="text-lg md:text-xl mb-8 text-grey-200">
                       Profesionalno polinarnje, detailing automobila i kermaička zaštita
                     </p>
-                    <PrimaryButton to="#contactForm" className="mr-4">
+                    <PrimaryButton href="/kontakt">
                       Pozovite nas
                     </PrimaryButton>
                   </div>
@@ -99,36 +103,42 @@ const Home = () => {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <ValueCard
-              title="Expert Technicians"
-              description="Our team consists of certified professionals with years of experience."
-              icon={<Sparkles className="text-yellow-500" size={36} />}
-              darkMode
+              title="Garancija 5 g."
+              description="9H keramički premaz sa pisanom garancijom do 60 mes."
+              icon={<ShieldCheck className="text-[#FFD43A]" size={36} />}
             />
             <ValueCard
-              title="Premium Products"
-              description="We use only the highest quality products for lasting results."
-              icon={<Shield className="text-yellow-500" size={36} />}
-              darkMode
+              title="Vrhunski sjaj"
+              description="Najnovije tehnike poliranja vraćaju fabrički (ili bolji) finiš."
+              icon={<Sparkles className="text-[#FFD43A]" size={36} />}
             />
             <ValueCard
-              title="Convenient Service"
-              description="Flexible scheduling and quick turnaround times to fit your busy life."
-              icon={<Clock className="text-yellow-500" size={36} />}
-              darkMode
+              title="Premium materijali"
+              description="Radimo isključivo s provjerenim brendovima (Koch Chemie, Gtechniq)."
+              icon={<Award className="text-[#FFD43A]" size={36} />}
             />
             <ValueCard
-              title="Satisfaction Guaranteed"
-              description="We're not happy until you're completely satisfied with our work."
-              icon={<Tool className="text-yellow-500" size={36} />}
-              darkMode
+              title="120+ zadovoljnih klijenata"
+              description="Google ocena 5★ – pogledajte galeriju i uverite se."
+              icon={<Users className="text-[#FFD43A]" size={36} />}
+            />
+            <ValueCard
+              title="Sertifikovani stručnjaci"
+              description="5+ god iskustva u detailingu."
+              icon={<Briefcase className="text-[#FFD43A]" size={36} />}
+            />
+            <ValueCard
+              title="Sve na jednom mestu"
+              description="Dekontaminacija, poliranje, keramika i enterijer u jednoj radionici."
+              icon={<MapPin className="text-[#FFD43A]" size={36} />}
             />
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <PrimaryButton to="#contactForm" className="mr-4">
+          <PrimaryButton href="/kontakt" className="mr-4">
             Pozovite nas
           </PrimaryButton>
         </div>
@@ -156,7 +166,7 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <SecondaryButton to="/gallery">
+            <SecondaryButton to="/galerija">
               Pogledajte još slika <ArrowRight className="ml-2 inline-block" size={16} />
             </SecondaryButton>
           </div>
@@ -196,7 +206,7 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <PrimaryButton to="/services">Pročitaj više</PrimaryButton>
+            <PrimaryButton to="/paketi">Pročitaj više</PrimaryButton>
           </div>
         </div>
       </section>
@@ -222,7 +232,7 @@ const Home = () => {
             ))}
           </div>
            <div className="text-center mt-12">
-            <PrimaryButton to="/contact">Kontaktirajte nas</PrimaryButton>
+            <PrimaryButton to="/kontakt">Kontaktirajte nas</PrimaryButton>
           </div>
         </div>
       </section>
@@ -236,24 +246,22 @@ const ValueCard = ({
   title,
   description,
   icon,
-  darkMode = false,
 }: {
   title: string
   description: string
   icon: React.ReactNode
-  darkMode?: boolean
 }) => {
   return (
     <div
-      className={`${darkMode ? "bg-navy-900" : "bg-white"} rounded-lg shadow-md p-6 transition-transform hover:translate-y-[-5px]`}
+      className="bg-navy-900 rounded-lg shadow-md p-6 transition-all group hover:shadow-lg hover:-translate-y-1"
     >
       <div className="mb-4">{icon}</div>
       <h3
-        className={`text-xl font-bold mb-2 border-b-4 border-yellow-500 pb-2 inline-block ${darkMode ? "text-white" : ""}`}
+        className="text-xl font-bold mb-2 border-b-4 border-[#FFD43A] pb-2 inline-block text-white"
       >
         {title}
       </h3>
-      <p className={darkMode ? "text-grey-200" : "text-gray-600"}>{description}</p>
+      <p className="text-grey-200">{description}</p>
     </div>
   )
 }

@@ -1,7 +1,3 @@
-- [ ] Some small style fixes
-  - [x] Padding on home components
-  - [x] Center text, almost everywhere
-  - [x] Social links above everything else in contact, also smaller, without background color
 - [ ] Home
   - [ ] Carousel better text
   - [x] Packages cards (2-3 key points) + button for packages page (learn more)
@@ -9,13 +5,15 @@
   - [ ] Why us + button for contact
   - [ ] Before & after + button for see more in gallery
   - [ ] horizontal scroll for some parts
+  - [ ] Testemonial carousel google reviews
 
 - [ ] Packages page
   - [ ] Design from o3
 - [ ] Gallery will have two types of images before & after and car images
+- [ ] Use serbian links and nav
 
 - [ ] Images
-  - [ ] Logo nav
+  - [x] Logo nav
   - [x] Logo footer
   - [ ] Call us button nav
   - [ ] call us button footer

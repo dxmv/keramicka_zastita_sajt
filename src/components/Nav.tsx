@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router"
 import { Menu, X } from "lucide-react"
 import logo from "../assets/images/logo.jpg"
+import PrimaryButton from "./PrimaryButton"
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -38,11 +39,12 @@ const Nav = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/services">Services</NavLink>
-            <NavLink to="/gallery">Gallery</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+          <nav className="hidden md:flex space-x-8 items-center">
+            <NavLink to="/">Početna</NavLink>
+            <NavLink to="/paketi">Paketi</NavLink>
+            <NavLink to="/galerija">Galerija</NavLink>
+            <NavLink to="/kontakt">Kontakt</NavLink>
+            {/* <PrimaryButton href="tel:+38164614">Pozovite nas</PrimaryButton> */}
           </nav>
 
           {/* Mobile Menu Button */}
