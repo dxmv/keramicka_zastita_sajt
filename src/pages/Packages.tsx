@@ -7,6 +7,10 @@ import { Tab } from "@headlessui/react"
 import SectionHeading from "../components/SectionHeading"
 import PrimaryButton from "../components/PrimaryButton"
 
+import standard from "../assets/images/packages/standard2.png"
+import silver from "../assets/images/packages/silver.jpeg"
+import gold from "../assets/images/packages/gold.jpeg"
+
 type PriceBand = { label: string; range: string };
 
 export type Package = {
@@ -47,9 +51,9 @@ export const packages: Package[] = [
       "Brisanje unutrašnjih površina"
     ],
     prices: [
-      { label: "Malo vozilo",    range: "350 – 410 €" },
-      { label: "Srednje vozilo", range: "410 – 480 €" },
-      { label: "Veliko vozilo",  range: "480 – 560 €" }
+      { label: "Hečbek",    range: "250 – 310 €" },
+      { label: "Limuzina", range: "310 – 360 €" },
+      { label: "Džip",  range: "360 – 400 €" }
     ]
   },
   {
@@ -76,9 +80,9 @@ export const packages: Package[] = [
 
 // Images for each package
 const packageImages = {
-  standard: "/img/pkgs/standard.jpg",
-  silver: "/img/pkgs/silver.jpg",
-  gold: "/img/pkgs/gold.jpg"
+  standard: standard,
+  silver: silver,
+  gold: gold
 };
 
 const PackagesTabs = () => {

@@ -1,31 +1,22 @@
-- [x] Home
-  - [x] Carousel better text
-  - [x] Packages cards (2-3 key points) + button for packages page (learn more)
-  - [x] Services from images + button for services page
-  - [x] Why us + button for contact
-  - [x] Before & after + button for see more in gallery
-
-- [ ] Packages page
-  - [ ] Design from o3
-- [ ] Gallery will have two types of images before & after and car images
+- [ ] Better before & after
+- [ ] More responsive images 
 - [ ] Use serbian links and nav
 
 - [ ] Images
   - [x] Logo nav
   - [x] Logo footer
-  - [ ] Call us button nav
-  - [ ] call us button footer
-  - [ ] Recent work images(gallery)
+  - [x] call us button footer
+  - [x] Recent work images(gallery)
   - [ ] Packages images
   - [ ] Gallery images
 - [x] Real map in contact
 - [ ] Real info
-  - [ ] Home
-  - [ ] Packgaes
+  - [x] Home
+  - [x] Packgaes
   - [ ] Gallery
   - [x] Contact
   - [x] Footer
-  - [ ] Nav
+  - [x] Nav
 - [ ] Is it responsive
 - [ ] Favicon
 - [ ] Deploy
