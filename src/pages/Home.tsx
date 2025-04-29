@@ -10,7 +10,6 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 import "swiper/css/effect-fade"
 import {
-  ArrowRight,
   Sparkles,
   Shield,
   PenToolIcon as Tool,
@@ -40,7 +39,7 @@ import b3 from "../assets/images/before-after/b3.jpg"
 import a1 from "../assets/images/before-after/a1.jpg"
 import a2 from "../assets/images/before-after/a2.jpg"
 import a3 from "../assets/images/before-after/a3.jpg"
-import standard from "../assets/images/cars/merc-interior.jpg"
+import standard from "../assets/images/cars/porsche-back3.jpg"
 import silver from "../assets/images/cars/merc-front.jpg"
 import gold from "../assets/images/cars/bentley-wheel2.jpg"
 
