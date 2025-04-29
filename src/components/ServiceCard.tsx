@@ -9,9 +9,10 @@ interface ServiceCardProps {
   icon: React.ReactNode
   image: string
   links?: { text: string; url: string }[]
+  priceRange?: string
 }
 
-const ServiceCard = ({ id, name, description, icon, image, links = [] }: ServiceCardProps) => {
+const ServiceCard = ({ id, name, description, icon, image, links = [], priceRange }: ServiceCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl">
       {/* Image container with overflow for the image to extend beyond card borders */}
@@ -35,8 +36,15 @@ const ServiceCard = ({ id, name, description, icon, image, links = [] }: Service
       {/* Content */}
       <div className="pt-12 pb-6 px-6 text-center flex flex-col h-[calc(100%-12rem)]">
         <h3 className="text-xl font-bold mb-3 text-navy-900">{name}</h3>
+        {/* Price badge under title */}
+        {priceRange && (
+          <span className="inline-block bg-navy-900 text-white text-sm font-semibold px-3 py-1 rounded-full mb-4">
+            {priceRange}
+          </span>
+        )}
         <p className="text-gray-600 mb-6">{description}</p>
 
+        
         {/* Links */}
         {links.length > 0 && (
           <div className="space-y-2">

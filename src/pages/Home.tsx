@@ -175,6 +175,7 @@ const Home = () => {
               description="Pogodan za brzo osveženje vašeg automobila. Paket obuhvata spoljašnje pranje, dubinsko pranje enterijera, detaljan detailing, kao i čišćenje i zaštitu kože, pružajući vozilu čist i blistav izgled."
               icon={<Sparkles className="text-brown-700" size={32} />}
               image={standard}
+              priceRange="250 – 400 €"
             />
             <ServiceCard
               id="silver"
@@ -182,6 +183,7 @@ const Home = () => {
               description="Idealan izbor za osnovnu negu vozila. Paket uključuje dekontaminaciju laka, višeslojno poliranje, keramičku zaštitu u trajanju do 2 godine, keramičku zaštitu felni, dubinsko pranje enterijera i zaštitu svih kožnih površina."
               icon={<Shield className="text-gray-500" size={32} />}
               image={silver}
+              priceRange="250 – 400 €"
             />
             <ServiceCard
               id="gold"
@@ -189,6 +191,7 @@ const Home = () => {
               description="Premium paket za maksimalnu zaštitu i izgled vašeg automobila. Uključuje dekontaminaciju laka, višeslojno poliranje, produženu keramičku zaštitu do 5 godina, keramičku zaštitu stakala, poliranje i keramičku zaštitu felni, dubinsko pranje enterijera i kompletnu zaštitu kožnih površina."
               icon={<Tool className="text-yellow-500" size={32} />}
               image={gold}
+              priceRange="510 – 800 €"
             />
           </div>
 
