@@ -183,7 +183,7 @@ const Home = () => {
               description="Idealan izbor za osnovnu negu vozila. Paket uključuje dekontaminaciju laka, višeslojno poliranje, keramičku zaštitu u trajanju do 2 godine, keramičku zaštitu felni, dubinsko pranje enterijera i zaštitu svih kožnih površina."
               icon={<Shield className="text-gray-500" size={32} />}
               image={silver}
-              priceRange="250 – 400 €"
+              priceRange="370 – 560 €"
             />
             <ServiceCard
               id="gold"
