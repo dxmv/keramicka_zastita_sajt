@@ -50,9 +50,9 @@ export const packages: Package[] = [
       "Zaštita svih kožnih površina (ako ih ima)"
     ],
     prices: [
-      { label: "Hečbek",    range: "370 – 420 €" },
-      { label: "Limuzina", range: "420 – 500 €" },
-      { label: "Džip",  range: "500 – 560 €" }
+      { label: "Mala vozila",    range: "370 – 420 €" },
+      { label: "Srednja vozila", range: "420 – 500 €" },
+      { label: "Velika vozila",  range: "500 – 560 €" }
     ]
   },
   {
